@@ -6,12 +6,9 @@
 # Load encrypted data bag item in a recipe
 # Using the webserver custom resource
 
-webserver 'Install and Configure Web Server' do
-  package_name 'apache2'       # Replace with the desired web server package name
-  doc_root '/var/www/my_site'  # Replace with the desired document root
-  action :install
-end
+credentials = data_bag_item('credentials', 'credentials', IO.read('/etc/chef/encryption_key'))
 
-webserver 'Start Web Server' do
-  action :start
-end
+username = credentials['username']
+password = credentials['password']
+
+log "Username: #{username}, Password: #{password}"
