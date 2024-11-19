@@ -3,7 +3,7 @@
 current_dir = File.dirname(__FILE__)
 log_level                :info
 log_location             STDOUT
-node_name                "sooryav"
+node_name                "chef-node"
 client_key               "#{current_dir}/sooryav.pem"
 chef_server_url          "https://api.chef.io/organizations/chefserver02"
 cookbook_path            ["#{current_dir}/../cookbooks"]
