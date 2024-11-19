@@ -6,4 +6,4 @@ log_location             STDOUT
 node_name                "chef-node"
 client_key               "chef/chef-starter/chef-repo/.chef/sooryav.pem"
 chef_server_url          "https://api.chef.io/organizations/chefserver02"
-cookbook_path            ["#{current_dir}/../cookbooks"]
+cookbook_path            ["chef-starter/chef-repo/cookbooks"]
